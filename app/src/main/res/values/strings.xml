@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">Restaurant Search App</string>
+    <string name="station_name">駅名</string>
+    <string name="restaurant_search">レストラン検索</string>
+    <string name="store_name">店名</string>
+    <string name="search">検索</string>
+    <string name="distance_search">距離で検索</string>
+    <string name="distance_300m">300m以内</string>
+    <string name="distance_500m">500m以内</string>
+    <!-- ジャンル選択用 -->
+    <string-array name="spinner_items">
+        <item>ジャンル選択</item>
+        <item>居酒屋</item>
+        <item>ダイニングバー・バル</item>
+        <item>創作料理</item>
+        <item>和食</item>
+        <item>洋食</item>
+        <item>イタリアン・フレンチ</item>
+        <item>中華</item>
+        <item>焼肉・ホルモン</item>
+        <item>韓国料理</item>
+        <item>アジア・エスニック料理</item>
+        <item>各国料理</item>
+        <item>カラオケ・パーティ</item>
+        <item>バー・カクテル</item>
+        <item>ラーメン</item>
+        <item>お好み焼き・もんじゃ</item>
+        <item>カフェ・スイーツ</item>
+        <item>その他グルメ</item>
+    </string-array>
 </resources>

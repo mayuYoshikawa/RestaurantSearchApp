@@ -39,4 +39,3 @@ class TopFragment : Fragment() {
         _binding = null
     }
 }
-

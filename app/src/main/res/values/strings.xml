@@ -4,9 +4,16 @@
     <string name="restaurant_search">レストラン検索</string>
     <string name="store_name">店名</string>
     <string name="search">検索</string>
-    <string name="distance_search">距離で検索</string>
-    <string name="distance_300m">300m以内</string>
-    <string name="distance_500m">500m以内</string>
+    <string name="search_around">周辺の飲食店を検索</string>
+    <string name="add_filter">絞り込み条件追加</string>
+    <string name="tabeho">食べ放題</string>
+    <string name="nomiho">飲み放題</string>
+    <string name="station">%1$s駅</string>
+    <string name="mobile_coupon">携帯クーポン</string>
+    <string name="search_result">検索結果</string>
+    <string name="caution">Caution</string>
+    <string name="caution_station_name">駅名を入力してください。</string>
+    <string name="ok">OK</string>
     <!-- ジャンル選択用 -->
     <string-array name="spinner_items">
         <item>ジャンル選択</item>

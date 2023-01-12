@@ -6,11 +6,17 @@
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="android:maxLines">1</item>
-        <item name="android:layout_marginTop">30dp</item>
     </style>
     <style name="textAuto20">
         <item name="android:textSize">20sp</item>
         <item name="autoSizeMaxTextSize">20sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="textAuto15">
+        <item name="android:textSize">15sp</item>
+        <item name="autoSizeMaxTextSize">15sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="android:maxLines">1</item>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.ShowAllFragment">
+
+        <TextView
+            android:id="@+id/show_all_text"
+            style="@style/textAuto30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/search_result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/genre_text"
+            style="@style/textAuto15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/station_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/show_all_text"
+            tools:layout_editor_absoluteY="80dp"
+            tools:text="ジャンル" />
+
+        <TextView
+            android:id="@+id/station_text"
+            style="@style/textAuto15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/coupon_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/genre_text"
+            app:layout_constraintTop_toBottomOf="@+id/show_all_text"
+            tools:layout_editor_absoluteY="80dp"
+            tools:text="@string/station" />
+
+        <TextView
+            android:id="@+id/coupon_text"
+            style="@style/textAuto15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/nomiho_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/station_text"
+            app:layout_constraintTop_toBottomOf="@+id/show_all_text"
+            tools:layout_editor_absoluteY="80dp"
+            tools:text="@string/mobile_coupon" />
+
+        <TextView
+            android:id="@+id/nomiho_text"
+            style="@style/textAuto15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/tabeho_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/coupon_text"
+            app:layout_constraintTop_toBottomOf="@+id/show_all_text"
+            tools:layout_editor_absoluteY="80dp"
+            tools:text="@string/nomiho" />
+
+        <TextView
+            android:id="@+id/tabeho_text"
+            style="@style/textAuto15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/nomiho_text"
+            app:layout_constraintTop_toBottomOf="@+id/show_all_text"
+            tools:layout_editor_absoluteY="80dp"
+            tools:text="@string/tabeho" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

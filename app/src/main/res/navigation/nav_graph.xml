@@ -9,5 +9,18 @@
         android:id="@+id/topFragment"
         android:name="com.example.restaurantsearchapp.fragment.TopFragment"
         android:label="fragment_top"
-        tools:layout="@layout/fragment_top" />
+        tools:layout="@layout/fragment_top" >
+        <action
+            android:id="@+id/action_topFragment_to_showAllFragment"
+            app:destination="@id/showAllFragment" />
+        <argument
+            android:name="inputData"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/showAllFragment"
+        android:name="com.example.restaurantsearchapp.fragment.ShowAllFragment"
+        android:label="fragment_show_all"
+        tools:layout="@layout/fragment_show_all" />
 </navigation>

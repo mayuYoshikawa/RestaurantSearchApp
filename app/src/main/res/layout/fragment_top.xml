@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="viewModel"
-            type="com.example.restaurantsearchapp.HotpepperViewModel" />
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/restaurant_search"
-            android:textSize="30sp"
+            android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -28,11 +22,13 @@
         <Spinner
             android:id="@+id/genre_spinner"
             style="@style/textAuto20"
-            android:layout_marginTop="50dp"
             android:layout_width="200dp"
             android:layout_height="50dp"
+            android:layout_marginTop="50dp"
             android:entries="@array/spinner_items"
             android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:spinnerMode="dialog"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/top_text" />
@@ -40,9 +36,9 @@
         <EditText
             android:id="@+id/station_search_edit"
             style="@style/textAuto20"
-            android:layout_marginTop="10dp"
             android:layout_width="200sp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
             android:hint="@string/station_name"
             android:inputType="text"
@@ -50,66 +46,86 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/genre_spinner" />
 
-        <EditText
-            android:id="@+id/store_name_edit"
+        <TextView
+            android:id="@+id/Filter_text"
             style="@style/textAuto20"
-            android:layout_marginTop="10dp"
-            android:layout_width="200sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:hint="@string/store_name"
+            android:layout_marginTop="30dp"
+            android:text="@string/add_filter"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/station_search_edit" />
+
+        <CheckBox
+            android:id="@+id/coupon_checkbox"
+            style="@style/textAuto20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/mobile_coupon"
+            app:layout_constraintEnd_toStartOf="@+id/tabeho_checkbox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Filter_text" />
+
+        <CheckBox
+            android:id="@+id/tabeho_checkbox"
+            style="@style/textAuto20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/tabeho"
+            app:layout_constraintEnd_toStartOf="@+id/nomiho_checkbox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/coupon_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/Filter_text" />
+
+        <CheckBox
+            android:id="@+id/nomiho_checkbox"
+            style="@style/textAuto20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/nomiho"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tabeho_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/Filter_text" />
 
         <Button
             android:id="@+id/search_button"
             style="@style/textAuto20"
-            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{() -> viewModel.buttonTapped()}"
+            android:layout_marginTop="10dp"
             android:text="@string/search"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/store_name_edit" />
+            app:layout_constraintTop_toBottomOf="@+id/tabeho_checkbox" />
+
         <TextView
-            android:id="@+id/distance_text"
+            android:id="@+id/search_around_text"
             style="@style/textAuto20"
-            android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/distance_search"
+            android:layout_marginTop="50dp"
+            android:text="@string/search_around"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/search_button" />
 
         <Button
-            android:id="@+id/distance300m_button"
+            android:id="@+id/search_around_button"
             style="@style/textAuto20"
-            android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/distance_300m"
-            app:layout_constraintEnd_toStartOf="@+id/distance500m_button"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/distance_text" />
-
-        <Button
-            android:id="@+id/distance500m_button"
-            style="@style/textAuto20"
             android:layout_marginTop="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/distance_500m"
+            android:text="@string/search"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/distance300m_button"
-            app:layout_constraintTop_toBottomOf="@+id/distance_text" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_around_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
